@@ -1,5 +1,14 @@
 # graphql_Nodejs
 
+**(Nécessite Node.js sur la machine)**
+## Pour initialiser le node.js
+````bash
+npm init -y
+````
+## Pour avoir les dépendances nécessaires pour le projet
+````bash
+npm install express express-graphql graphql mongoose
+````
 ## Données de test MongoDB
 
 Le fichier `books.json` dans le dossier `mongodb/graphql` contient des données qui sont utilisées pour initialiser la collection (ou table) associée à notre projet graphql_Nodejs. Ces données de test sont utilisées pour vérifier et tester les fonctionnalités créées.
