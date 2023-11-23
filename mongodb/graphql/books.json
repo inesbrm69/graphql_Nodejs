@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "655f2365d1d50976a494f3f2"
+  },
+  "id": "book-1",
+  "title": "Jamais plus",
+  "pageCount": 300,
+  "author": "Collen Hoover",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "655f242dd1d50976a494f3f5"
+  },
+  "id": "book-2",
+  "title": "Captive",
+  "pageCount": 516,
+  "author": "Sarah Rivens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "655f2474d1d50976a494f3f8"
+  },
+  "id": "book-3",
+  "title": "à contre sens ",
+  "pageCount": 250,
+  "author": "Mercedes Ron",
+  "__v": 0
+}]
