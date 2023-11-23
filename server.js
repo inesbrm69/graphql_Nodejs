@@ -89,7 +89,7 @@ const GetBookByIdQuery = {
     type: BookType,
     args: { id: { type: GraphQLString } },
     resolve(parent, args) {
-        return BookModel.findById(args.id);
+        return BookModel.findOne(args);
     },
 };
 
