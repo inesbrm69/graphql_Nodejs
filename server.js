@@ -13,12 +13,8 @@ const BookType = new GraphQLObjectType({
     }),
 });
 
-const schema = new GraphQLSchema({
-    query: BookType,
-});
-
 //Base de donnée
-//Schéma
+    //Schéma
 const bookSchema = new mongoose.Schema({
     id: String,
     title: String,
@@ -41,23 +37,6 @@ db.once('open', () => {
 
 // Créer un modèle basé sur le schéma
 const BookModel = mongoose.model('Book', bookSchema);
-
-/*// Création d'un livre en utilisant le modèle
-const newBook = new BookModel({
-    id: "book-4",
-    title: "Culpa mia",
-    pageCount: 500,
-    author: "Bive Zalae"
-});*/
-
-// Utiliser la promesse retournée par la méthode save pour gérer les erreurs
-/*newBook.save()
-    .then(book => {
-        console.log('Livre ajouté à la base de données :', book);
-    })
-    .catch(error => {
-        console.error('Erreur lors de l\'ajout du livre à la base de données :', error);
-    });*/
 
 //Mutations
 
@@ -125,17 +104,14 @@ const DeleteBookMutation = {
     },
 };
 
-
-
-
-// Ajouter les nouvelles requêtes et mutations à votre schéma
-const schema1 = new GraphQLSchema({
+//Schéma
+const schema = new GraphQLSchema({
     query: new GraphQLObjectType({
         name: 'Query',
         fields: {
             getAllBooks: GetAllBooksQuery,
             getBookById: GetBookByIdQuery,
-        },
+        },BookType
     }),
     mutation: new GraphQLObjectType({
         name: 'Mutation',
@@ -150,7 +126,7 @@ const schema1 = new GraphQLSchema({
 
 const app = express();
 app.use('/api', graphqlHTTP({
-    schema: schema1,
+    schema: schema,
     graphiql: true,
 }));
 app.listen(4000, () => {
