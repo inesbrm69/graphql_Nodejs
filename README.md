@@ -7,7 +7,15 @@ npm init -y
 ````
 ## Pour avoir les dépendances nécessaires pour le projet
 ````bash
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+````
+````bash
 npm install express express-graphql graphql mongoose
+````
+````bash
+npm install mongoose
 ````
 ## Données de test MongoDB
 
